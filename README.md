@@ -1,59 +1,336 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+# RIJILL X MARKET
 
-## About Laravel
+### Full-Stack E-Commerce Web Application
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+RIJILL X MARKET is a full-stack e-commerce web application developed using Laravel 12, PHP, MySQL, Blade, JavaScript, and Vite.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+The project demonstrates an end-to-end online shopping workflow, including customer authentication, product browsing, cart management, checkout, order tracking, inventory management, and an administrative dashboard.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+**Project Status:** Portfolio Project — Core Features Completed and Locally Tested
 
-## Learning Laravel
+**Developer:** Rijal Muharam  
+**GitHub:** [@rijal-devlp](https://github.com/rijal-devlp)  
+**Repository:** [rijill-x-market](https://github.com/rijal-devlp/rijill-x-market)
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+---
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## Features
 
-## Laravel Sponsors
+### Customer Features
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+- Customer registration and login
+- Product catalog and category filtering
+- Product search
+- Product detail pages
+- Persistent shopping cart
+- Cart quantity management
+- Partial checkout for selected cart items
+- Checkout form with customer and shipping information
+- Payment method selection:
+  - QRIS
+  - Bank transfer
+  - E-wallet
+  - Cash on Delivery (COD)
+- Checkout success page
+- Customer order history
+- Detailed order information
+- Payment status display (UNPAID / PAID)
+- Order status tracking
 
-### Premium Partners
+### Admin Features
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+- Administrative dashboard with summary statistics
+- Product management (Create, Read, Update, Delete)
+- Product image upload
+- Product category and stock management
+- Soft deletion and product trash
+- Restore deleted products
+- Permanently delete products
+- Customer order management
+- Update order status:
+  - Pending
+  - Processing
+  - Shipped
+  - Completed
+  - Cancelled
+- Update payment status
+- Role-based access restrictions
 
-## Contributing
+### Additional Functionality
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+- Database-backed cart storage
+- Stock validation during checkout
+- Database transactions and row locking for inventory consistency
+- Product information snapshots in order history
+- Preservation of order item details after product deletion
+- Password hashing
+- Login rate limiting
+- Responsive interface
+- Custom dark-themed user interface
 
-## Code of Conduct
+---
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+## Technology Stack
 
-## Security Vulnerabilities
+| Technology | Purpose |
+|---|---|
+| Laravel 12 | Backend framework |
+| PHP 8.2 | Server-side programming |
+| MySQL | Relational database |
+| Blade | Server-rendered templates |
+| HTML5 | Page structure |
+| CSS3 | Custom styling and responsive layout |
+| JavaScript | Frontend interactions |
+| Vite | Frontend asset bundling |
+| Composer | PHP dependency management |
+| npm | JavaScript dependency management |
+| Git & GitHub | Version control |
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+---
 
-## License
+## Application Workflow
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+### Customer
+
+1. Register or log in.
+2. Browse products and search by name or category.
+3. View product details.
+4. Add products to the shopping cart.
+5. Adjust product quantities.
+6. Select items for checkout.
+7. Enter shipping information.
+8. Choose a payment method.
+9. Place an order.
+10. View order history and track order status.
+
+### Administrator
+
+1. Log in with an authorized admin account.
+2. Access dashboard statistics.
+3. Create and manage products.
+4. Review incoming orders.
+5. Update order processing and shipping statuses.
+6. Update payment status.
+7. Manage deleted products.
+
+---
+
+## Installation
+
+### Prerequisites
+
+Make sure the following tools are installed:
+
+- PHP 8.2 or compatible PHP version supported by the project
+- Composer
+- MySQL
+- Node.js and npm
+- Git
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/rijal-devlp/rijill-x-market.git
+cd rijill-x-market
+```
+
+### 2. Install PHP dependencies
+
+```bash
+composer install
+```
+
+### 3. Install frontend dependencies
+
+```bash
+npm install
+```
+
+### 4. Configure the environment
+
+Copy the example environment file.
+
+On Windows PowerShell:
+
+```powershell
+Copy-Item .env.example .env
+```
+
+On Linux or macOS:
+
+```bash
+cp .env.example .env
+```
+
+Generate an application key:
+
+```bash
+php artisan key:generate
+```
+
+### 5. Configure MySQL
+
+Create a MySQL database named:
+
+```text
+toko_online
+```
+
+Update the database settings in `.env`:
+
+```dotenv
+APP_NAME="RIJILL X MARKET"
+APP_ENV=local
+APP_DEBUG=true
+APP_URL=http://127.0.0.1:8000
+
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=toko_online
+DB_USERNAME=root
+DB_PASSWORD=
+```
+
+Adjust the database credentials to match your local environment.
+
+The example above is intended for local development only.
+
+### 6. Run database migrations
+
+```bash
+php artisan migrate
+```
+
+### 7. Create the public storage link
+
+```bash
+php artisan storage:link
+```
+
+### 8. Start the Laravel development server
+
+```bash
+php artisan serve
+```
+
+### 9. Start Vite
+
+Open another terminal and run:
+
+```bash
+npm run dev
+```
+
+### 10. Open the application
+
+Visit:
+
+http://127.0.0.1:8000
+
+An admin account must be provisioned with the appropriate role before accessing administrative features. Do not use default or publicly documented passwords in a deployed environment.
+
+---
+
+## Payment System Disclaimer
+
+**This application uses a simulated payment workflow.**
+
+Payment options are provided for demonstrating the checkout experience.
+
+- No real payment gateway is integrated.
+- No actual financial transactions are processed.
+- Payment status is managed by an authorized administrator.
+- The application should not be used to collect real customer payments without further development and security review.
+
+---
+
+## Security
+
+The application includes several security-related features:
+
+- Laravel authentication and session handling
+- Password hashing
+- Role-based authorization
+- Login rate limiting
+- Server-side input validation
+- Database transactions for checkout
+- Stock consistency checks
+
+This is a portfolio demonstration project and has not undergone an independent production security audit.
+
+Before production deployment:
+
+- Configure production environment variables
+- Disable debug mode
+- Use secure database credentials
+- Replace all development credentials
+- Configure HTTPS
+- Review file permissions
+- Set up monitoring and backups
+
+---
+
+## Testing
+
+The following workflows have been manually tested in the local development environment:
+
+- Admin dashboard navigation
+- Product creation, editing, deletion, and restoration
+- Order management and status updates
+- Customer authentication and product browsing
+- Shopping cart and partial checkout
+- Order history and payment status
+- Admin-to-customer order status synchronization
+- Role-based access restrictions
+- Responsive layout checks
+
+Automated test coverage is not claimed by this document.
+
+---
+
+## Screenshots
+
+Application screenshots will be added to showcase:
+
+- Homepage / Product Collection
+- Product Details
+- Shopping Cart
+- Checkout
+- Customer Orders
+- Admin Dashboard
+- Product Management
+- Order Management
+
+---
+
+## Future Improvements
+
+Potential future enhancements include:
+
+- Real payment gateway integration
+- Automated testing
+- Email notifications
+- Product reviews and ratings
+- Sales analytics
+- Deployment monitoring
+
+---
+
+## Author
+
+**Rijal Muharam**
+
+Informatics Engineering Graduate  
+Full-Stack Web Development
+
+GitHub: https://github.com/rijal-devlp
+
+---
+
+## Project Notice
+
+RIJILL X MARKET was developed as a personal portfolio project to demonstrate practical Laravel-based full-stack web development skills.
+
+The project is intended for educational and demonstration purposes.
