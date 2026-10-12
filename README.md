@@ -1,4 +1,3 @@
-
 # RIJILL X MARKET
 
 ### Full-Stack E-Commerce Web Application
@@ -7,11 +6,13 @@ RIJILL X MARKET is a full-stack e-commerce web application developed using Larav
 
 The project demonstrates an end-to-end online shopping workflow, including customer authentication, product browsing, cart management, checkout, order tracking, inventory management, and an administrative dashboard.
 
-**Project Status:** Portfolio Project — Core Features Completed and Locally Tested
-
+**Project Status:** Portfolio Project — Deployed Online and Manually Tested  
+**Live Demo:** https://rijillxmarket.alwaysdata.net  
 **Developer:** Rijal Muharam  
 **GitHub:** [@rijal-devlp](https://github.com/rijal-devlp)  
 **Repository:** [rijill-x-market](https://github.com/rijal-devlp/rijill-x-market)
+
+> **Demo notice:** This is a portfolio demonstration. Payment methods and payment status are simulated; no real payments are processed.
 
 ---
 
@@ -76,8 +77,8 @@ The project demonstrates an end-to-end online shopping workflow, including custo
 | Technology | Purpose |
 |---|---|
 | Laravel 12 | Backend framework |
-| PHP 8.2 | Server-side programming |
-| MySQL | Relational database |
+| PHP 8.2+ | Server-side programming |
+| MySQL / MariaDB | Relational database |
 | Blade | Server-rendered templates |
 | HTML5 | Page structure |
 | CSS3 | Custom styling and responsive layout |
@@ -86,6 +87,18 @@ The project demonstrates an end-to-end online shopping workflow, including custo
 | Composer | PHP dependency management |
 | npm | JavaScript dependency management |
 | Git & GitHub | Version control |
+
+---
+
+## Live Demo
+
+**Website:** https://rijillxmarket.alwaysdata.net
+
+The application is deployed on alwaysdata for portfolio demonstration. Visitors can explore the product catalog and, where applicable, register a customer account to try the shopping workflow.
+
+Administrative functions are restricted to authorized accounts. No public administrator password is provided.
+
+**Important:** The checkout and payment flows are demonstrations only. Do not submit real payment information or attempt to make a real payment through this demo.
 
 ---
 
@@ -122,9 +135,9 @@ The project demonstrates an end-to-end online shopping workflow, including custo
 
 Make sure the following tools are installed:
 
-- PHP 8.2 or compatible PHP version supported by the project
+- PHP 8.2 or a compatible version supported by the project
 - Composer
-- MySQL
+- MySQL or MariaDB
 - Node.js and npm
 - Git
 
@@ -193,9 +206,7 @@ DB_USERNAME=root
 DB_PASSWORD=
 ```
 
-Adjust the database credentials to match your local environment.
-
-The example above is intended for local development only.
+Adjust the database credentials to match your local environment. The example above is intended for **local development only**. Do not commit your actual `.env` file or production credentials.
 
 ### 6. Run database migrations
 
@@ -231,6 +242,8 @@ http://127.0.0.1:8000
 
 An admin account must be provisioned with the appropriate role before accessing administrative features. Do not use default or publicly documented passwords in a deployed environment.
 
+**Note:** The database migrations create the schema. Depending on the repository's seed data, product categories and demo products may need to be added separately before the catalog is populated.
+
 ---
 
 ## Payment System Disclaimer
@@ -258,41 +271,42 @@ The application includes several security-related features:
 - Database transactions for checkout
 - Stock consistency checks
 
-This is a portfolio demonstration project and has not undergone an independent production security audit.
+Basic role-access behavior has been manually checked as part of project testing. **This is not an independent security audit or penetration test.**
 
-Before production deployment:
+For any deployment intended to handle real customers or payments, additional steps are required:
 
-- Configure production environment variables
-- Disable debug mode
-- Use secure database credentials
-- Replace all development credentials
-- Configure HTTPS
-- Review file permissions
-- Set up monitoring and backups
+- Configure production environment variables and disable debug mode
+- Use secure database credentials and replace development credentials
+- Enforce HTTPS
+- Review file permissions and upload validation
+- Configure monitoring, backups, and recovery procedures
+- Perform a thorough security review
+- Integrate a properly tested payment provider before accepting real payments
 
 ---
 
 ## Testing
 
-The following workflows have been manually tested in the local development environment:
+The following workflows have been manually tested during development and, as reported by the developer, on the hosted demo:
 
 - Admin dashboard navigation
 - Product creation, editing, deletion, and restoration
+- Product image uploads and catalog display
 - Order management and status updates
 - Customer authentication and product browsing
 - Shopping cart and partial checkout
-- Order history and payment status
+- Order history and simulated payment status
 - Admin-to-customer order status synchronization
-- Role-based access restrictions
-- Responsive layout checks
+- Basic role-based access restrictions
+- Responsive layout checks on desktop and mobile
 
-Automated test coverage is not claimed by this document.
+**Testing scope:** Manual functional testing. Automated test coverage, load testing, and independent security auditing are not claimed.
 
 ---
 
 ## Screenshots
 
-Application screenshots will be added to showcase:
+Screenshots of the following pages can be added to the repository:
 
 - Homepage / Product Collection
 - Product Details
@@ -302,6 +316,8 @@ Application screenshots will be added to showcase:
 - Admin Dashboard
 - Product Management
 - Order Management
+
+> Screenshots are not yet included in this README. Add actual screenshots from the running application when available, avoiding personal customer information or credentials.
 
 ---
 
@@ -320,8 +336,7 @@ Potential future enhancements include:
 
 ## Author
 
-**Rijal Muharam**
-
+**Rijal Muharam**  
 Informatics Engineering Graduate  
 Full-Stack Web Development
 
@@ -333,4 +348,4 @@ GitHub: https://github.com/rijal-devlp
 
 RIJILL X MARKET was developed as a personal portfolio project to demonstrate practical Laravel-based full-stack web development skills.
 
-The project is intended for educational and demonstration purposes.
+The project is intended for educational and demonstration purposes, not for processing real commercial transactions.
