@@ -1,3 +1,4 @@
+
 # RIJILL X MARKET
 
 ### Full-Stack E-Commerce Web Application
@@ -12,7 +13,21 @@ The project demonstrates an end-to-end online shopping workflow, including custo
 **GitHub:** [@rijal-devlp](https://github.com/rijal-devlp)  
 **Repository:** [rijill-x-market](https://github.com/rijal-devlp/rijill-x-market)
 
-> **Demo notice:** This is a portfolio demonstration. Payment methods and payment status are simulated; no real payments are processed.
+> **Demo Notice:** This is a portfolio demonstration. Payment methods and payment status are simulated; no real payments are processed.
+
+---
+
+## Live Demo
+
+**Website:** https://rijillxmarket.alwaysdata.net
+
+The application is deployed on alwaysdata for portfolio demonstration.
+
+Visitors can explore the product catalog and register a customer account to experience the shopping workflow.
+
+Administrative features are restricted to authorized accounts. No public administrator credentials are provided.
+
+**Important:** The checkout and payment flows are demonstrations only. Do not submit real payment information or attempt to make a real payment through this demo.
 
 ---
 
@@ -87,24 +102,79 @@ The project demonstrates an end-to-end online shopping workflow, including custo
 | Composer | PHP dependency management |
 | npm | JavaScript dependency management |
 | Git & GitHub | Version control |
+| alwaysdata | Web hosting and deployment |
 
 ---
 
-## Live Demo
+## Screenshots
 
-**Website:** https://rijillxmarket.alwaysdata.net
+The following screenshots showcase the RIJILL X MARKET e-commerce application, including customer and administrator features.
 
-The application is deployed on alwaysdata for portfolio demonstration. Visitors can explore the product catalog and, where applicable, register a customer account to try the shopping workflow.
+### 1. Homepage
 
-Administrative functions are restricted to authorized accounts. No public administrator password is provided.
+The main storefront featuring the RIJILL X MARKET shopping experience.
 
-**Important:** The checkout and payment flows are demonstrations only. Do not submit real payment information or attempt to make a real payment through this demo.
+![Homepage](screenshots/homepg.jpg)
+
+### 2. Product Catalog
+
+Browse available products and explore the product collection.
+
+![Product Catalog](screenshots/katalog.jpg)
+
+### 3. Product Details
+
+View detailed information about individual products.
+
+![Product Details](screenshots/detail%20produk.jpg)
+
+### 4. Shopping Cart
+
+Manage selected products and quantities before checkout.
+
+![Shopping Cart](screenshots/keranjang.jpg)
+
+### 5. Checkout
+
+Enter shipping information and select a simulated payment method.
+
+![Checkout](screenshots/checkout.jpg)
+
+### 6. Customer Order History
+
+Review previously placed orders and track their statuses.
+
+![Customer Order History](screenshots/my%20order.jpg)
+
+### 7. Admin Dashboard
+
+Administrative dashboard for monitoring store activities.
+
+![Admin Dashboard](screenshots/dashborad%20admin.jpg)
+
+### 8. Admin Product Management
+
+Create, update, and manage products and inventory.
+
+![Admin Product Management](screenshots/produk%20admin.jpg)
+
+### 9. Admin Order Management
+
+Review customer orders and manage payment and shipping statuses.
+
+![Admin Order Management](screenshots/order%20admin.jpg)
+
+### 10. Admin Product Trash
+
+Manage soft-deleted products, including restoration and permanent deletion.
+
+![Admin Product Trash](screenshots/sampah%20admin.jpg)
 
 ---
 
 ## Application Workflow
 
-### Customer
+### Customer Workflow
 
 1. Register or log in.
 2. Browse products and search by name or category.
@@ -117,12 +187,12 @@ Administrative functions are restricted to authorized accounts. No public admini
 9. Place an order.
 10. View order history and track order status.
 
-### Administrator
+### Administrator Workflow
 
-1. Log in with an authorized admin account.
+1. Log in with an authorized administrator account.
 2. Access dashboard statistics.
 3. Create and manage products.
-4. Review incoming orders.
+4. Review incoming customer orders.
 5. Update order processing and shipping statuses.
 6. Update payment status.
 7. Manage deleted products.
@@ -141,26 +211,26 @@ Make sure the following tools are installed:
 - Node.js and npm
 - Git
 
-### 1. Clone the repository
+### 1. Clone the Repository
 
 ```bash
 git clone https://github.com/rijal-devlp/rijill-x-market.git
 cd rijill-x-market
 ```
 
-### 2. Install PHP dependencies
+### 2. Install PHP Dependencies
 
 ```bash
 composer install
 ```
 
-### 3. Install frontend dependencies
+### 3. Install Frontend Dependencies
 
 ```bash
 npm install
 ```
 
-### 4. Configure the environment
+### 4. Configure the Environment
 
 Copy the example environment file.
 
@@ -206,21 +276,23 @@ DB_USERNAME=root
 DB_PASSWORD=
 ```
 
-Adjust the database credentials to match your local environment. The example above is intended for **local development only**. Do not commit your actual `.env` file or production credentials.
+Adjust the database credentials to match your local environment.
 
-### 6. Run database migrations
+**Important:** These settings are intended for local development only. Do not commit your actual `.env` file or production credentials.
+
+### 6. Run Database Migrations
 
 ```bash
 php artisan migrate
 ```
 
-### 7. Create the public storage link
+### 7. Create the Public Storage Link
 
 ```bash
 php artisan storage:link
 ```
 
-### 8. Start the Laravel development server
+### 8. Start the Laravel Development Server
 
 ```bash
 php artisan serve
@@ -234,15 +306,17 @@ Open another terminal and run:
 npm run dev
 ```
 
-### 10. Open the application
+### 10. Open the Application
 
 Visit:
 
 http://127.0.0.1:8000
 
-An admin account must be provisioned with the appropriate role before accessing administrative features. Do not use default or publicly documented passwords in a deployed environment.
+An administrator account must be provisioned with the appropriate role before accessing administrative features.
 
-**Note:** The database migrations create the schema. Depending on the repository's seed data, product categories and demo products may need to be added separately before the catalog is populated.
+Do not use default or publicly documented passwords in a deployed environment.
+
+**Note:** Database migrations create the schema. Depending on the repository's seed data, product categories and demo products may need to be added separately before the catalog is populated.
 
 ---
 
@@ -271,7 +345,9 @@ The application includes several security-related features:
 - Database transactions for checkout
 - Stock consistency checks
 
-Basic role-access behavior has been manually checked as part of project testing. **This is not an independent security audit or penetration test.**
+Basic role-access behavior has been manually checked as part of project testing.
+
+**This is not an independent security audit or penetration test.**
 
 For any deployment intended to handle real customers or payments, additional steps are required:
 
@@ -300,24 +376,9 @@ The following workflows have been manually tested during development and, as rep
 - Basic role-based access restrictions
 - Responsive layout checks on desktop and mobile
 
-**Testing scope:** Manual functional testing. Automated test coverage, load testing, and independent security auditing are not claimed.
+**Testing Scope:** Manual functional testing.
 
----
-
-## Screenshots
-
-Screenshots of the following pages can be added to the repository:
-
-- Homepage / Product Collection
-- Product Details
-- Shopping Cart
-- Checkout
-- Customer Orders
-- Admin Dashboard
-- Product Management
-- Order Management
-
-> Screenshots are not yet included in this README. Add actual screenshots from the running application when available, avoiding personal customer information or credentials.
+Automated test coverage, load testing, and independent security auditing are not claimed.
 
 ---
 
@@ -336,11 +397,14 @@ Potential future enhancements include:
 
 ## Author
 
-**Rijal Muharam**  
+**Rijal Muharam**
+
 Informatics Engineering Graduate  
 Full-Stack Web Development
 
-GitHub: https://github.com/rijal-devlp
+**GitHub:** https://github.com/rijal-devlp
+
+**Live Project:** https://rijillxmarket.alwaysdata.net
 
 ---
 
