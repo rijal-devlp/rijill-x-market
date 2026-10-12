@@ -409,6 +409,18 @@ Full-Stack Web Development
 ---
 
 ## Project Notice
+## Contact
+
+**Rijal Muharam**  
+Informatics Engineering Graduate | Full-Stack Web Developer
+
+I'm open to job opportunities, freelance projects, and collaborations in web application development.
+
+- **Email:** [rijalmuharam26@gmail.com](mailto:rijalmuharam26@gmail.com)
+- **GitHub:** [github.com/rijal-devlp](https://github.com/rijal-devlp)
+- **Live Portfolio:** [RIJILL X MARKET](https://rijillxmarket.alwaysdata.net)
+
+Feel free to contact me for professional opportunities, project inquiries, or collaborations.
 
 RIJILL X MARKET was developed as a personal portfolio project to demonstrate practical Laravel-based full-stack web development skills.
 
